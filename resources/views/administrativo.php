@@ -65,8 +65,8 @@
 
 
             <div class="col-md-12">
-                <h4>Tabela de Cadastrados</h4>
-                <div class="table-responsive">
+                <h4>Tabela de Cadastrados de funcionarios</h4>
+                <div class="table-responsive container">
 
 
                     <table id="mytable" class="table table-bordred table-striped">
@@ -83,19 +83,18 @@
                             <th>Visualizar</th>
                         </thead>
                         <tbody>      
-                                //lista de dados do banco
                                 <?php foreach ($usuarios as $us): ?>
                                      <tr>
                                      <td><input type="checkbox" class="checkthis" /></td>
-                                     <td><?= $us->id?></td>;
-                                     <td><?= $us->nome?></td>;
-                                     <td><?= $us->cpf?></td>;
-                                     <td><?= $us->email?></td>;
+                                     <td><?= $us->id?></td>
+                                     <td><?= $us->nome?></td>
+                                     <td><?= $us->cpf?></td>
+                                     <td><?= $us->email?></td>
                                      <td class = "text-center"><?= $us->nivel_acesso_id?></td>
                                     
                                                                <td>
                                         <p data-placement='top' data-toggle='tooltip' title='Editar'>
-                                            <a href= 'id'><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal"
+                                            <a href= ''><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal"
                                                 data-target='#edit'>
                                                 <span
                                                     class="glyphicon glyphicon-pencil">
@@ -123,9 +122,8 @@
                                         </td>
                                     </tr>
                                     <?php endforeach ?>
-                                    <?php $usuarios->links() ?>
                         </tbody>
-
+                        <?php $usuarios->links() ?>
                     </table>
                 </div>
 
