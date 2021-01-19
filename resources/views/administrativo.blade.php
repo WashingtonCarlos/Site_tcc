@@ -1,15 +1,3 @@
-<?php
-  //  session_start();
-  //  include_once("seguraca.php");
-  //  include_once("conexao.php");
-  //  echo "Bem Vindo Administrador: </br>";
-  //  echo "CPF: ".$_SESSION['cpf']."  Nome: ".$_SESSION['nomeUsuario'];
-
-?>
-<!-- <br> -->
-<!-- <a href="sair.php">Sair</a> -->
-<br>
-<br>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -27,27 +15,6 @@
 </head>
 
 <body>
-
-    <?php
-        // //verificar se está sendo passado pela URL a página atual, senão é atribuido a pagina 
-        // $pagina = (isset($_GET['pagina']))? $_GET['pagina'] : 1;
-        // // selecionado dos os nomes dos funcionarios da tabela
-        // $resultado = mysqli_query($conectar,"SELECT * FROM funcionario ORDER BY 'id'");
-        // //contar a quantidade de pessoas cadastradas
-        // $linhas = mysqli_num_rows($resultado);
-        // //quantidade de nomes por pagina 
-        // $qtd_pagina = 6;
-        // //calcular a quantidade de paginas necessarias para apresentação dos funcionarios cadastrados
-        // $num_paginas = ceil($linhas/$qtd_pagina);
-        // //calcular o inicio da visualização
-        // $inicio = ($qtd_pagina*$pagina)-$qtd_pagina;
-        // //selecionar os funcionarios a serem apresentados por pagina
-        // $result_func = mysqli_query($conectar,"SELECT * FROM funcionario LIMIT $inicio,$qtd_pagina");
-        // $linhas = mysqli_num_rows($result_func);
-
-
-
-    ?>
 
     <div class="container">
             <ul class="nav col-md-4">
@@ -83,7 +50,7 @@
                             <th>Visualizar</th>
                         </thead>
                         <tbody>      
-                                <?php foreach ($usuarios as $us): ?>
+                                @foreach ($usuarios as $us)
                                      <tr>
                                      <td><input type="checkbox" class="checkthis" /></td>
                                      <td><?= $us->id?></td>
@@ -121,10 +88,10 @@
                                         </p>
                                         </td>
                                     </tr>
-                                    <?php endforeach ?>
+                                    @endforeach
                         </tbody>
-                        <?php $usuarios->links() ?>
                     </table>
+                   {!! $usuarios->links() !!}
                 </div>
 
             </div>

@@ -9,7 +9,7 @@ class UserController extends Controller
 {
     public function lista() {
 
-        $usuarios = DB::table('funcionario')->simplePaginate(10);
+        $usuarios = DB::table('funcionario')->paginate(4);
         return view('administrativo')->with('usuarios',$usuarios);
 
     }
