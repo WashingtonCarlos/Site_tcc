@@ -16,6 +16,7 @@ class UserController extends Controller
 
     public function mostrar() {
 
+        $usuario = DB::select('funcionario * ');
         
     }
 

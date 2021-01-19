@@ -53,15 +53,15 @@
                                 @foreach ($usuarios as $us)
                                      <tr>
                                      <td><input type="checkbox" class="checkthis" /></td>
-                                     <td><?= $us->id?></td>
-                                     <td><?= $us->nome?></td>
-                                     <td><?= $us->cpf?></td>
-                                     <td><?= $us->email?></td>
-                                     <td class = "text-center"><?= $us->nivel_acesso_id?></td>
+                                     <td>{{ $us->id }}</td>
+                                     <td>{{ $us->nome }}</td>
+                                     <td>{{ $us->cpf }}</td>
+                                     <td>{{ $us->email }}</td>
+                                     <td class = "text-center">{{ $us->nivel_acesso_id }}</td>
                                     
                                                                <td>
                                         <p data-placement='top' data-toggle='tooltip' title='Editar'>
-                                            <a href= ''><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal"
+                                            <a href= "{{}}"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal"
                                                 data-target='#edit'>
                                                 <span
                                                     class="glyphicon glyphicon-pencil">
@@ -71,7 +71,7 @@
                                         </td>
                                         <td>
                                         <p data-placement="top" data-toggle='tooltip' title="Deletar">
-                                            <a href = ""><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete">
+                                            <a href = "{{}}"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete">
                                                 <span class="glyphicon glyphicon-trash">
                                                 
                                                 </span>
@@ -80,7 +80,7 @@
                                         </td>
                                         <td>
                                         <p data-placement="top" data-toggle="tooltip" title="Visualizar">
-                                            <a href = ""><button class="btn btn-info btn-xs" data-title="Visualizar" data-toggle="modal" data-target="#visualizar">
+                                            <a href = "{{}}"><button class="btn btn-info btn-xs" data-title="Visualizar" data-toggle="modal" data-target="#visualizar">
                                                 <span class="glyphicon glyphicon-eye-open">
                                                 
                                                 </span>
