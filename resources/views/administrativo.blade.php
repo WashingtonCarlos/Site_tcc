@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -53,11 +54,11 @@
                                 @foreach ($usuarios as $us)
                                      <tr>
                                      <td><input type="checkbox" class="checkthis" /></td>
-                                     <td><?= $us->id?></td>
-                                     <td><?= $us->nome?></td>
-                                     <td><?= $us->cpf?></td>
-                                     <td><?= $us->email?></td>
-                                     <td class = "text-center"><?= $us->nivel_acesso_id?></td>
+                                     <td>{{ $us->id }}</td>
+                                     <td>{{ $us->nome }}</td>
+                                     <td>{{ $us->cpf }}</td>
+                                     <td>{{ $us->email }}</td>
+                                     <td class = "text-center">{{ $us->nivel_acesso_id }}</td>
                                     
                                                                <td>
                                         <p data-placement='top' data-toggle='tooltip' title='Editar'>
@@ -80,7 +81,7 @@
                                         </td>
                                         <td>
                                         <p data-placement="top" data-toggle="tooltip" title="Visualizar">
-                                            <a href = ""><button class="btn btn-info btn-xs" data-title="Visualizar" data-toggle="modal" data-target="#visualizar">
+                                            <a href = "{{ route('visualiza_usuario') }}"><button class="btn btn-info btn-xs" data-title="Visualizar" data-toggle="modal" data-target="#visualizar">
                                                 <span class="glyphicon glyphicon-eye-open">
                                                 
                                                 </span>

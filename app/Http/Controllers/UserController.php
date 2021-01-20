@@ -14,9 +14,11 @@ class UserController extends Controller
 
     }
 
-    public function mostrar() {
+    public function mostrar($id) {
 
-        
+
+        $usuario = DB::select('select * from funcionario wherer id = ',$id);
+        return view('visualiza_usuario')->with('usua',$usuario);
     }
 
 }

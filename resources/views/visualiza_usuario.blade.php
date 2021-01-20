@@ -1,19 +1,4 @@
-<?php
-    session_start();
-    include_once("seguraca.php");
-    include_once("conexao.php");
-    echo "Bem Vindo Administrador: </br>";
-    echo "CPF: ".$_SESSION['cpf']."  Nome: ".$_SESSION['nomeUsuario'];
-
-        //Busca Usuario:
-        $id = $_GET['id'];
-        //Executa consulta:
-        $result = mysqli_query($conectar,"SELECT * FROM funcionario WHERE id = '$id' LIMIT 1 ");
-        $resultado = mysqli_fetch_assoc($result);
-
-?>
-<br>
-<a href="administrativo.php">Voltar</a>
+<a href="{{route = ('administrativo')}}">Voltar</a>
 <br>
 <br>
 <!DOCTYPE html>
@@ -35,44 +20,46 @@
 <body>
     <div class="container theme-showcase" role="main">
         <div class="row">
+        @foreach ($usua as $uss)
             <div class="col-md-12">
                 <div class="col-xs-3 col-sm-1 col-md-1">
                     ID:
                 </div>
                 <div class="col-xs-9 col-sm-11 col-md-11">
-                    <?php echo $resultado['id']; ?>
+                    {{ uss->id }}
                 </div>
                 <div class="col-xs-3 col-sm-1 col-md-1">
                     CPF:
                 </div>
                 <div class="col-xs-9 col-sm-11 col-md-11">
-                    <?php echo $resultado['cpf']; ?>
+                    {{ uss->cpf}}
                 </div>
                 <div class="col-xs-3 col-sm-1 col-md-1">
                     NOME:
                 </div>
                 <div class="col-xs-9 col-sm-11 col-md-11">
-                    <?php echo $resultado['nome']; ?>
+                    {{ uss->nome }} 
                 </div>
                 <div class="col-xs-3 col-sm-1 col-md-1">
                     E-MAIL:
                 </div>
                 <div class="col-xs-9 col-sm-11 col-md-11">
-                    <?php echo $resultado['email']; ?>
+                    {{ uss->email }} 
                 </div>
                 <div class="col-xs-3 col-sm-1 col-md-1">
                     ENDEREÇO:
                 </div>
                 <div class="col-xs-9 col-sm-11 col-md-11">
-                    <?php echo $resultado['endereco']; ?>
+                    {{ uss->endereco }} 
                 </div>
                 <div class="col-xs-3 col-sm-1 col-md-1">
                     TELEFONE:
                 </div>
                 <div class="col-xs-9 col-sm-11 col-md-11">
-                    <?php echo $resultado['telefone']; ?>
+                    {{ uss->telefone }} 
                 </div>
             </div>
+            @endforeach;
         </div>
     </div>
 </body>
