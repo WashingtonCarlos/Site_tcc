@@ -3,7 +3,7 @@
 namespace Frota\Http\Controllers;
 
 use Illuminate\Support\Facades\Route;
-//use Frota\Http\Controllers;
+use Frota\Http\Controllers;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,7 +20,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/funcionarios', [UserController::class, 'lista']);
-Route::get('/detalhe', [UserController::class, 'mostrar']);
+Route::get('/detalhe', [UserController::class, 'mostrar'])->name('visualiza_usuario');
  //Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

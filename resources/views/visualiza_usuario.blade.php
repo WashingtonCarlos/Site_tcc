@@ -1,4 +1,4 @@
-<a href="{{route = ('administrativo')}}">Voltar</a>
+<a href="{{route('administrativo')}}">Voltar</a>
 <br>
 <br>
 <!DOCTYPE html>
