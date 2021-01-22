@@ -81,7 +81,7 @@
                                         </td>
                                         <td>
                                         <p data-placement="top" data-toggle="tooltip" title="Visualizar">
-                                            <a href = "{{ url('/detalhe', $us->id) }}"><button class="btn btn-info btn-xs" data-title="Visualizar" data-toggle="modal" data-target="#visualizar">
+                                            <a href = "{{ route('visualiza_usuario', $us->id) }}"><button class="btn btn-info btn-xs" data-title="Visualizar" data-toggle="modal" data-target="#visualizar">
                                                 <span class="glyphicon glyphicon-eye-open">
                                                 
                                                 </span>

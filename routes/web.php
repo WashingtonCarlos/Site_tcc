@@ -20,7 +20,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/funcionarios', [UserController::class, 'lista']);
-Route::get('/detalhe', [UserController::class, 'mostrar'])->name('visualiza_usuario');
+Route::get('/detalhe/{id}', [UserController::class, 'mostrar'])->name('visualiza_usuario');
  //Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
