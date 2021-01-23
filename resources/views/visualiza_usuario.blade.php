@@ -1,4 +1,4 @@
-<a href="{{route('administrativo')}}">Voltar</a>
+<a href="{{URL::previous()}}">Voltar</a>
 <br>
 <br>
 <!DOCTYPE html>
@@ -26,37 +26,37 @@
                     ID:
                 </div>
                 <div class="col-xs-9 col-sm-11 col-md-11">
-                    {{ uss->id }}
+                    {{ $uss->id }}
                 </div>
                 <div class="col-xs-3 col-sm-1 col-md-1">
                     CPF:
                 </div>
                 <div class="col-xs-9 col-sm-11 col-md-11">
-                    {{ uss->cpf}}
+                    {{ $uss->cpf}}
                 </div>
                 <div class="col-xs-3 col-sm-1 col-md-1">
                     NOME:
                 </div>
                 <div class="col-xs-9 col-sm-11 col-md-11">
-                    {{ uss->nome }} 
+                    {{ $uss->nome }} 
                 </div>
                 <div class="col-xs-3 col-sm-1 col-md-1">
                     E-MAIL:
                 </div>
                 <div class="col-xs-9 col-sm-11 col-md-11">
-                    {{ uss->email }} 
+                    {{ $uss->email }} 
                 </div>
                 <div class="col-xs-3 col-sm-1 col-md-1">
                     ENDEREÇO:
                 </div>
                 <div class="col-xs-9 col-sm-11 col-md-11">
-                    {{ uss->endereco }} 
+                    {{ $uss->endereco }} 
                 </div>
                 <div class="col-xs-3 col-sm-1 col-md-1">
                     TELEFONE:
                 </div>
                 <div class="col-xs-9 col-sm-11 col-md-11">
-                    {{ uss->telefone }} 
+                    {{ $uss->telefone }} 
                 </div>
             </div>
             @endforeach;
