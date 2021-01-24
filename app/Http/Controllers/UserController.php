@@ -24,7 +24,7 @@ class UserController extends Controller
         
         $usuario = DB::table('funcionario')->where('id','=',$id);
         $usuario->delete();
-        return redirect()->route('funcionarios');
+        return redirect('/funcionarios');
     }
 
 }

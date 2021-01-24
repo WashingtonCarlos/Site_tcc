@@ -71,7 +71,7 @@
                                         </p>
                                         </td>
                                         <td>
-                                        <form method="post" action=" /deletar/{{$us->id}}">
+                                        <form method="post" action=" /deletar/{{$us->id}}" onsubmit="confirm('Tem certeza que deseja excluir?')">
                                             {{method_field('DELETE')}}
                                             @csrf
                                         <p data-placement="top" data-toggle='tooltip' title="Deletar">
