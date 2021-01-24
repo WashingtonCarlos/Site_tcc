@@ -21,6 +21,7 @@ Route::get('/', function () {
 });
 Route::get('/funcionarios', [UserController::class, 'lista']);
 Route::get('/detalhe/{id}', [UserController::class, 'mostrar'])->name('visualiza_usuario');
+Route::delete('/deletar/{id}',[UserController::class,'destroy'])->name('lista');
  //Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

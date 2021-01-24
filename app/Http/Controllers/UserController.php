@@ -20,4 +20,11 @@ class UserController extends Controller
         return view('visualiza_usuario')->with('usua',$usuario);
     }
 
+    public function destroy($id) {
+        
+        $usuario = DB::table('funcionario')->where('id','=',$id);
+        $usuario->delete();
+        return redirect()->route('funcionarios');
+    }
+
 }
