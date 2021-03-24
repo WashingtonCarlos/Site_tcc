@@ -17,10 +17,14 @@ class CreateUsuariosTable extends Migration
             $table->id();
             $table->string('cep');
             $table->string('cidade');
-            $table->string('email');
+            $table->string('e_mail')->unique();
             $table->string('nome');
             $table->string('endereco');
-            $table->string('cidade');
+            $table->string('cpf');
+            $table->string('estado');
+            $table->string('telefone');
+            $table->string('nivel_acesso');
+            $table->string('senha');
             $table->timestamps();
         });
     }
