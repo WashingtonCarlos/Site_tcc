@@ -7,7 +7,8 @@
 </head>
 <body>
     <div class="container">
-    @yield('conteudo')
+    @include('login')
+    @yield('content')
     </div>
 </body>
 </html>
