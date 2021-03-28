@@ -17,7 +17,7 @@ use Frota\Http\Controllers;
 */
 
 Route::get('/', function () {
-    return view('menu_cad');
+    return view('login');
 });
 Route::get('/funcionarios', [UserController::class, 'lista']);
 Route::get('/detalhe/{id}', [UserController::class, 'mostrar'])->name('visualiza_usuario');
