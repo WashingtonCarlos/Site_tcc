@@ -13,7 +13,7 @@
 </head>
 <body class="text-center">
     <div class="container">
-    @include('login')
+    @include('menu')
     @yield('content')
     </div>
 </body>
