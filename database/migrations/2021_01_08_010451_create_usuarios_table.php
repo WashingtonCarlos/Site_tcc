@@ -20,7 +20,11 @@ class CreateUsuariosTable extends Migration
             $table->string('email');
             $table->string('nome');
             $table->string('endereco');
-            $table->string('cidade');
+            $table->string('cpf');
+            $table->string('nivel_de_acesso');
+            $table->string('estado');
+            $table->string('telefone');
+            $table->string('password');
             $table->timestamps();
         });
     }
